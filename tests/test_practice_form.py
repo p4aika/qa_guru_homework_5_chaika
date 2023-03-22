@@ -11,6 +11,7 @@ def test_form(set_browser_size):
     browser.element('#gender-radio-1 + .custom-control-label').click()
     browser.element('#userNumber').type('1234567890')
     browser.element('#dateOfBirthInput').type(Keys.CONTROL + 'a' + Keys.NULL + '01 Mar 2000')
+    browser.execute_script("window.scrollBy(0, 500)")
     browser.element('.subjects-auto-complete__input>input').type('c')
     browser.element('#react-select-2-option-2').click()
     browser.element('#hobbies-checkbox-2 + .custom-control-label').click()
